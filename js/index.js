@@ -57,8 +57,8 @@ var app = {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) { 
-
-		var url=serviceURL + 'checkcoupons/'+result.text+'/460';
+	var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
+	var url=serviceURL + 'checkcoupons/'+result.text+'/460';
         $.getJSON(url, displayEmployee);
 		
 		   alert(url);
