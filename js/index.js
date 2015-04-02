@@ -62,7 +62,7 @@ var app = {
 		var url=serviceURL + 'checkcoupons/67235537/460';
         
 		 $.getJSON(url, function(satyam){
-           alert(satyam.data);
+        		 alert(satyam.data);
         });
 		
 		
