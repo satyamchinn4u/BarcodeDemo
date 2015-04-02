@@ -58,7 +58,17 @@ var app = {
 
         scanner.scan( function (result) { 
 
-            alert("We got a barcode\n Result: " + result.text);  
+        $.getJSON(serviceURL + 'checkcoupons/'+result.text+'/460', displayEmployee);
+		
+		   if(displayEmployee=="1")
+		   {
+		   alert('Coupons applied succesfully');
+		   }else
+		   {
+		   alert('Your Coupons has either been expired or invalid');   
+		   }
+		
+		  //  alert("We got a barcode\n Result: " + result.text);  
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
