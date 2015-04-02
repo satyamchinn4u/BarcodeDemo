@@ -58,8 +58,10 @@ var app = {
 
         scanner.scan( function (result) { 
 
-        $.getJSON(serviceURL + 'checkcoupons/'+result.text+'/460', displayEmployee);
+		var url=serviceURL + 'checkcoupons/'+result.text+'/460';
+        $.getJSON(url, displayEmployee);
 		
+		   alert(url);
 		   if(displayEmployee=="1")
 		   {
 		   alert('Coupons applied succesfully');
