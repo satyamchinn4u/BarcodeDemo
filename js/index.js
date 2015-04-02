@@ -61,7 +61,7 @@ var app = {
 		var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
 		var url=serviceURL + 'checkcoupons/67235537/460';
         
-		 $.getJSON(url, function(satyam){
+		 $.getJSON("http://automation.ctrl4c.com/mobileApp/mobile.php?id=67546", function(satyam){
         		 alert(satyam.data);
         });
 		
