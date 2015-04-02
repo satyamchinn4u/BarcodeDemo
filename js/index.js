@@ -67,7 +67,7 @@ var app = {
 		
 		
 		   //alert(url);
-		   if(result.data=="1")
+		   if(satyam.data=="1")
 		   {
 		   alert('Coupons applied succesfully');
 		   }else
