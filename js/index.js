@@ -61,14 +61,13 @@ var app = {
 		var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
 		var url=serviceURL + 'checkcoupons/67235537/460';
         
-		$.getJSON(url,function(result){
-            $.each(result, function(i, data){
-              alert(data);
-            });
+		 $.getJSON(url, function(result){
+           alert(result.data);
         });
 		
+		
 		   //alert(url);
-		   if(displayEmployee=="1")
+		   if(result.data=="1")
 		   {
 		   alert('Coupons applied succesfully');
 		   }else
