@@ -59,17 +59,17 @@ var app = {
         scanner.scan( function (result) { 
 
 		var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
-		var url=serviceURL + 'checkcoupons/'+result.text+'/460';
-     //   $.getJSON(url, displayEmployee);
+		var url=serviceURL + 'checkcoupons/67235537/460';
+        $.getJSON(url, displayEmployee);
 		
 		   alert(url);
-		//   if(displayEmployee=="1")
-		  // {
-		  // alert('Coupons applied succesfully');
-		  // }else
-		  // {
-		 //  alert('Your Coupons has either been expired or invalid');   
-		  // }
+		   if(displayEmployee=="1")
+		   {
+		   alert('Coupons applied succesfully');
+		   }else
+		   {
+		   alert('Your Coupons has either been expired or invalid');   
+		   }
 		
 		  //  alert("We got a barcode\n Result: " + result.text);  
 
