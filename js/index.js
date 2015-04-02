@@ -55,23 +55,13 @@ var app = {
         console.log('scanning');
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-		var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
+
         scanner.scan( function (result) { 
 
-        	$.getJSON(serviceURL + 'checkcoupons/'+result.text+'/460', displayEmployee);
-});
-		   if(displayEmployee=="1")
-		   {
-		   alert('Coupons applied succesfully');
-		   }else
-		   {
-		   alert('Your Coupons has either been expired or invalid');   
-		   }
-		   
-		    /*alert("We got a barcode\n" + 
+            alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
             "Format: " + result.format + "\n" + 
-            "Cancelled: " + result.cancelled);  */
+            "Cancelled: " + result.cancelled);  
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
@@ -88,6 +78,18 @@ var app = {
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
+    },
+
+    encode: function() {
+        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+
+        scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
+            alert("encode success: " + success);
+          }, function(fail) {
+            alert("encoding failed: " + fail);
+          }
+        );
+
     }
 
 };
