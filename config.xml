@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.ryanw.barcodedemo"
+        version   = "2.0.0">
+    <name>Satyam Scanner Tesing</name>
+
+    <description>	
+This is a demo for coupons Code scannser
+    </description>
+
+    <author href="http://ctrls.in" email="satyamchinna4u@gmail.com">
+        Automation Team
+    </author>
+
+    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="debug-server" required="true">
+       <param name="domain" value="http://debug.phonegap.com"/>
+       <param name="key" value="willoughby"/>
+    </feature>
+
+    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+    <preference name="webviewbounce"    value="false" />
+
+    <icon src="icon.png" />
+    <icon src="res/icon/android/logo-36x36.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="res/icon/android/logo-48x48.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="res/icon/android/logo-72x72.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="res/icon/android/logo-96x96.png"  gap:platform="android"    gap:density="xhdpi" />
+   
+
+    <gap:splash src="res/icon/android/logo-36x36.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/icon/android/logo-48x48.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/icon/android/logo-72x72.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/icon/android/logo-96x96.png" gap:platform="android" gap:density="xhdpi" />
+    
+
+    <!-- content src="http://www.w3.org/2010/05/video/mediaevents.html" / -->
+</widget>
