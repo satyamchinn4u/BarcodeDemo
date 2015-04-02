@@ -55,13 +55,23 @@ var app = {
         console.log('scanning');
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-
+		var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
         scanner.scan( function (result) { 
 
-            alert("We got a barcode\n" + 
+        	$.getJSON(serviceURL + 'checkcoupons/'+result.text+'/460', displayEmployee);
+});
+		   if(displayEmployee=="1")
+		   {
+		   alert('Coupons applied succesfully');
+		   }else
+		   {
+		   alert('Your Coupons has either been expired or invalid');   
+		   }
+		   
+		    /*alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
             "Format: " + result.format + "\n" + 
-            "Cancelled: " + result.cancelled);  
+            "Cancelled: " + result.cancelled);  */
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
