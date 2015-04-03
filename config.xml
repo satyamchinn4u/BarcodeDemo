@@ -21,6 +21,7 @@ This is a demo for coupons Code scannser
        <param name="key" value="willoughby"/>
     </feature>
         <access origin="*" launch-external="yes" />
+       <access orgin="http://automation.ctrl4c.com/mobileApp/mobile.php" />
 
 
     <preference name="phonegap-version" value="3.6.3" />
