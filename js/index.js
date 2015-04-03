@@ -57,25 +57,25 @@ var app = {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) { 
-
+ 		alert("We got a barcode\n Result: " + result.text);  
 	//	var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
 	//	var url=serviceURL + 'checkcoupons/67235537/460';
         
-		 $.getJSON("http://automation.ctrl4c.com/mobileApp/mobile.php?id=67546", function(barcodeResult){
-        		 //alert(barcodeResult.data);
+		 //$.getJSON("http://automation.ctrl4c.com/mobileApp/mobile.php?id=67546", function(barcodeResult){
+   //     		 //alert(barcodeResult.data);
         
 		
 		
-		   //alert(url);
-		   if(barcodeResult.data=="1")
-		   {
-		   alert('Coupons applied succesfully');
-		   }else
-		   {
-		   alert('Your Coupons has either been expired or invalid');   
-		   }
-		 });
-		    alert("We got a barcode\n Result: " + result.text);  
+		 //  //alert(url);
+		 //  if(barcodeResult.data=="1")
+		 //  {
+		 //  alert('Coupons applied succesfully');
+		 //  }else
+		 //  {
+		 //  alert('Your Coupons has either been expired or invalid');   
+		 //  }
+		 //});
+		   
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
