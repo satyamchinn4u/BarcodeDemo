@@ -61,20 +61,20 @@ var app = {
 		var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
 		var url=serviceURL + 'checkcoupons/67235537/460';
         
-		 $.getJSON("http://automation.ctrl4c.com/mobileApp/mobile.php?id=67546", function(satyam){
-        		 alert(satyam.data);
-        });
+		 $.getJSON("http://automation.ctrl4c.com/mobileApp/mobile.php?id=67546", function(barcodeResult){
+        		 //alert(barcodeResult.data);
+        
 		
 		
 		   //alert(url);
-		   if(satyam.data=="1")
+		   if(barcodeResult.data=="1")
 		   {
 		   alert('Coupons applied succesfully');
 		   }else
 		   {
 		   alert('Your Coupons has either been expired or invalid');   
 		   }
-		
+		 });
 		  //  alert("We got a barcode\n Result: " + result.text);  
 
            console.log("Scanner result: \n" +
