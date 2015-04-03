@@ -58,8 +58,8 @@ var app = {
 
         scanner.scan( function (result) { 
 
-		var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
-		var url=serviceURL + 'checkcoupons/67235537/460';
+	//	var serviceURL='http://automation.ctrl4c.com/cmsbluetheme/index.php/reports/';
+	//	var url=serviceURL + 'checkcoupons/67235537/460';
         
 		 $.getJSON("http://automation.ctrl4c.com/mobileApp/mobile.php?id=67546", function(barcodeResult){
         		 //alert(barcodeResult.data);
@@ -75,7 +75,7 @@ var app = {
 		   alert('Your Coupons has either been expired or invalid');   
 		   }
 		 });
-		  //  alert("We got a barcode\n Result: " + result.text);  
+		    alert("We got a barcode\n Result: " + result.text);  
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
