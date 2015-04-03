@@ -74,7 +74,11 @@ var app = {
 		   {
 		   alert('Your Coupons has either been expired or invalid');   
 		   }
-		 });
+		 }).success(function() { alert("second success"); })
+	 	   .error(function() { alert("error"); })
+		   .complete(function() { alert("complete"); 
+		   	
+		   });
 		   
 
            console.log("Scanner result: \n" +
